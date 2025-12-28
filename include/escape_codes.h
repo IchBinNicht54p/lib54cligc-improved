@@ -4,8 +4,8 @@
  * ------------------------------------------------------
 **/
 
-#ifndef ESCAPE_CODES_H
-#define ESCAPE_CODES_H
+#ifndef LIB54CLIGC_ESCAPE_CODES_H
+#define LIB54CLIGC_ESCAPE_CODES_H
 
 #define ESC_CONTROL_ETX '\x03' // CTRL + C
 #define ESC_CONTROL_BEL '\x07'
