@@ -22,10 +22,14 @@ TEST_FILES_COMPILED := $(patsubst $(TESTS)/%.c,$(TEST_BUILD)/%,$(TEST_FILES))
 
 CFLAGS=-I$(INCLUDE) 
 
-.PHONY: default build clean install uninstall archive_source compile_source test
+.PHONY: default build clean install uninstall archive_source compile_source test make_directories
 
 default: build install clean
-build: compile_source archive_source
+build: make_directories compile_source archive_source
+
+make_directories:
+	mkdir -p $(BUILD)
+	mkdir -p $(TEST_BUILD)
 
 clean:
 	rm build/*
