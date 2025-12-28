@@ -6,8 +6,6 @@ BUILD=build
 INCLUDE=include
 INSTALL_DIR=/usr/local
 
-GAMES=$(BIN)/games
-TESTS=$(BIN)/tests
 TEST_BUILD=$(BIN)/build
 
 INSTALL_DIR_LIB=$(INSTALL_DIR)/lib
@@ -17,8 +15,8 @@ INSTALL_DIR_INCLUDE=$(INSTALL_DIR)/include/lib54cligc_improved
 SRC_FILES := $(wildcard $(SRC)/*.c)
 SRC_FILES_COMPILED := $(patsubst $(SRC)/%.c,$(BUILD)/%.o,$(SRC_FILES))
 
-TEST_FILES := $(wildcard $(TESTS)/*.c)
-TEST_FILES_COMPILED := $(patsubst $(TESTS)/%.c,$(TEST_BUILD)/%,$(TEST_FILES))
+TEST_FILES := $(wildcard $(BIN)/*.c)
+TEST_FILES_COMPILED := $(patsubst $(BIN)/%.c,$(TEST_BUILD)/%,$(TEST_FILES))
 
 CFLAGS=-I$(INCLUDE) 
 
@@ -49,7 +47,7 @@ archive_source: $(SRC_FILES_COMPILED)
 test: $(TEST_FILES_COMPILED)
 compile_source: $(SRC_FILES_COMPILED)
 
-$(TEST_BUILD)/%: $(TESTS)/%.c
+$(TEST_BUILD)/%: $(BIN)/%.c
 	$(CC) $< -o $@ $(CFLAGS) -l54cligc-improved
 
 $(BUILD)/%.o: $(SRC)/%.c
