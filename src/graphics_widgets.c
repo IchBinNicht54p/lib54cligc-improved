@@ -1,7 +1,7 @@
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
-#include <lib54cligc_improved/graphics_2d.h>
+#include "graphics_2d.h"
 #include "graphics_widgets.h"
 
 int lib54cligc_widget_fps_counter_init(lib54cligc_fps_counter_t* counter){
