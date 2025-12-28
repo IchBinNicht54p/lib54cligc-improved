@@ -1,5 +1,5 @@
-#ifndef GRAPHICS_MININAL_H
-#define GRAPHICS_MININAL_H
+#ifndef LIB54CLIGC_H
+#define LIB54CLIGC_H
 #include <stdint.h>
 #include <stdio.h>
 
@@ -31,7 +31,8 @@ typedef enum lib54cligc_error_t {
     LIB54CLIGC_ERROR_PIXEL_OUT_OF_BOUNDS = 20,
     LIB54CLIGC_ERROR_PIXEL_MAP_INDEX = 21,
     LIB54CLIGC_ERROR_LOG_FILE = 30,
-    LIB54CLIGC_ERROR_INVALID_POINTER = 35
+    LIB54CLIGC_ERROR_INVALID_POINTER = 35,
+    LIB54CLIGC_ERROR_MEMORY_ALLOCATION = 36
 } lib54cligc_error_t;
 
 typedef enum lib54cligc_warning_t {
