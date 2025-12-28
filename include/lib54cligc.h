@@ -1,5 +1,8 @@
 #ifndef LIB54CLIGC_H
 #define LIB54CLIGC_H
+
+#define FPS_USLEEP_MAGIC_NUMBER 1980000
+
 #include <stdint.h>
 #include <stdio.h>
 
